@@ -4,7 +4,7 @@ The official web platform for **DCODE**, the coding community of Jorhat Engineer
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **Terminal-Style UI**: Navigation headers, command-line filters (`--filter`), and cursor-blink animations for an authentic developer experience.
 - **Glassmorphism Design**: High-end visual aesthetic with depth, blur effects, and smooth Framer Motion transitions.
@@ -14,7 +14,7 @@ The official web platform for **DCODE**, the coding community of Jorhat Engineer
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: React 18 + Vite
 - **Styling**: Tailwind CSS (Custom Theme)
@@ -25,24 +25,24 @@ The official web platform for **DCODE**, the coding community of Jorhat Engineer
 
 ---
 
-## 📈 Recent Major Updates (Session 2025-26)
+## Recent Major Updates (Session 2025-26)
 
-### 🗓 Events System Refinement
+### Events System Refinement
 - **Rebranding**: Transitioned from a "System Events" model to a retrospective "Previous Events" archival system.
 - **Asset Integration**: Full integration of `Mind Maze 3.0` assets and archival data.
 - **Logic Overhaul**: Implemented dynamic flagging (Flagship vs. Regular) and removed interactive registration elements for past logs.
 
-### 👥 Team Directory Expansion
+### Team Directory Expansion
 - **Member Mapping**: Populated 30+ team members with accurate roles, specific social media profiles (Instagram, LinkedIn), and institutional emails.
 - **Structural Updates**: Refined the hierarchy to include Faculty-in-Charge and Founder sections with dedicated profiles.
 
-### 🔌 System Integrations
+### System Integrations
 - **EmailJS Configuration**: Successfully linked production service keys for the Contact Page, enabling real-time communication.
 - **UI Optimization**: Enhanced Footer alignment, enlarged institutional branding, and implemented `target="_blank"` security protocols for all external links.
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (Latest LTS recommended)
@@ -72,7 +72,7 @@ npm run deploy
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── src/
@@ -87,7 +87,7 @@ npm run deploy
 
 ---
 
-## 📜 License
+## License
 
 This project is the property of **DCODE - JEC**. All rights reserved.
-Built with love and code by **Tasdeeque Ruhani** and the DCODE Team.
+Built with love and code by Tasdeeque Ruhani and the DCODE Team.
