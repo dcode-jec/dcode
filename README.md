@@ -1,122 +1,93 @@
-# React + Vite Starter
+# DCODE - Jorhat Engineering College Coding Club
 
-This project provides a minimal and efficient setup for building React applications using Vite, with support for Hot Module Replacement (HMR) and ESLint for maintaining code quality.
-
----
-
-## Overview
-
-This template is designed to help you get started quickly with a modern React development environment. It focuses on performance, simplicity, and developer experience.
-
-Key features include:
-
-- Fast development server powered by Vite  
-- Instant updates with Hot Module Replacement (HMR)  
-- Preconfigured ESLint for consistent code quality  
-- Flexible plugin support for React compilation  
+The official web platform for **DCODE**, the coding community of Jorhat Engineering College. Built with a premium, terminal-inspired aesthetic focusing on technical excellence and community engagement.
 
 ---
 
-## Available React Plugins
+## 🚀 Key Features
 
-Two official plugins are available for integrating React with Vite:
-
-### @vitejs/plugin-react
-
-- Uses Oxc for transformation  
-- Recommended for most projects  
-- Optimized for modern workflows  
-
-Repository:  
-https://github.com/vitejs/vite-plugin-react
+- **Terminal-Style UI**: Navigation headers, command-line filters (`--filter`), and cursor-blink animations for an authentic developer experience.
+- **Glassmorphism Design**: High-end visual aesthetic with depth, blur effects, and smooth Framer Motion transitions.
+- **Event Archive System**: A comprehensive "Previous Events" repository showcasing past flagship contests like *Mind Maze*, *Code Clash*, and *Hackvita*.
+- **Full Team Directory**: Dynamic mapping of faculty, core leads, and multiple departments (Technical, Management, PR, Design) with integrated social connectivity.
+- **Production-Ready Contact System**: Secure lead generation powered by EmailJS integration.
 
 ---
 
-### @vitejs/plugin-react-swc
+## 🛠 Tech Stack
 
-- Uses SWC, a fast Rust-based compiler  
-- Suitable for high-performance builds  
-- Alternative to Babel-based setups  
-
-Documentation:  
-https://swc.rs/
-
----
-
-## React Compiler
-
-The React Compiler is not enabled by default due to its impact on development and build performance.
-
-If you want to enable it, follow the official documentation:  
-https://react.dev/learn/react-compiler/installation
+- **Framework**: React 18 + Vite
+- **Styling**: Tailwind CSS (Custom Theme)
+- **Animations**: Framer Motion
+- **Icons**: Google Material Symbols & FontAwesome 6
+- **Deployment**: GitHub Pages (`gh-pages`)
+- **API**: EmailJS (@emailjs/browser)
 
 ---
 
-## ESLint Configuration
+## 📈 Recent Major Updates (Session 2025-26)
 
-This template includes a basic ESLint setup to enforce code quality and consistency.
+### 🗓 Events System Refinement
+- **Rebranding**: Transitioned from a "System Events" model to a retrospective "Previous Events" archival system.
+- **Asset Integration**: Full integration of `Mind Maze 3.0` assets and archival data.
+- **Logic Overhaul**: Implemented dynamic flagging (Flagship vs. Regular) and removed interactive registration elements for past logs.
 
-For production-grade applications, it is recommended to:
+### 👥 Team Directory Expansion
+- **Member Mapping**: Populated 30+ team members with accurate roles, specific social media profiles (Instagram, LinkedIn), and institutional emails.
+- **Structural Updates**: Refined the hierarchy to include Faculty-in-Charge and Founder sections with dedicated profiles.
 
-- Use TypeScript  
-- Enable type-aware linting rules  
-
-You can refer to the official TypeScript template for integration details:  
-https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts
-
-For advanced linting:  
-https://typescript-eslint.io
+### 🔌 System Integrations
+- **EmailJS Configuration**: Successfully linked production service keys for the Contact Page, enabling real-time communication.
+- **UI Optimization**: Enhanced Footer alignment, enlarged institutional branding, and implemented `target="_blank"` security protocols for all external links.
 
 ---
 
-## Getting Started
+## 💻 Getting Started
 
-### Clone the repository
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm or yarn
 
-git clone <your-repository-url>  
-cd <your-project-name>
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/tasdeequeruhani/dcode_official_developer_hub.git
 
-### Install dependencies
-
+# Install dependencies
 npm install
+```
 
-### Start development server
-
+### Development
+```bash
+# Start development server with HMR
 npm run dev
+```
 
-### Build for production
-
-npm run build
-
-### Preview production build
-
-npm run preview
-
----
-
-## Project Structure
-
-├── public/  
-├── src/  
-│   ├── assets/  
-│   ├── components/  
-│   ├── App.jsx  
-│   └── main.jsx  
-├── index.html  
-├── package.json  
-├── vite.config.js  
-└── eslint.config.js  
+### Deployment
+The project is configured for automated deployment to GitHub Pages.
+```bash
+# Build and publish to gh-pages branch
+npm run deploy
+```
 
 ---
 
-## Notes
+## 📁 Project Structure
 
-- This template is intentionally minimal and can be extended based on project needs.  
-- Consider adding routing, state management, and API handling as your application grows.  
-- For large-scale applications, TypeScript is strongly recommended.
+```text
+├── src/
+│   ├── assets/       # Media assets (Team, Gallery, Events)
+│   ├── components/   # Modular UI elements (Navbar, Footer, Hero)
+│   ├── pages/        # Main route pages (Home, Team, Events, Gallery, Contact)
+│   ├── App.jsx       # Routing & Theme management
+│   └── index.css     # Global styles & Tailwind layers
+├── index.html        # Main entry point
+└── vite.config.js    # Build & Deployment configuration
+```
 
 ---
 
-## License
+## 📜 License
 
-This project is open source and available under the MIT License.
+This project is the property of **DCODE - JEC**. All rights reserved.
+Built with love and code by **Tasdeeque Ruhani** and the DCODE Team.
