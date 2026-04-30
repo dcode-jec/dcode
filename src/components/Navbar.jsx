@@ -45,7 +45,7 @@ const Navbar = () => {
       <nav className="fixed top-0 w-full z-[100] bg-surface-container-lowest/80 backdrop-blur-md border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
         <div className="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-8 h-16 md:h-20">
           {/* Logo */}
-          <NavLink to="/" className="text-2xl font-black text-primary tracking-tighter flex items-center gap-2 hover:text-primary-fixed-dim transition-colors">
+          <NavLink to="/" className="text-2xl font-black text-primary tracking-tighter flex items-center gap-2 hover:text-primary-fixed-dim transition-colors mb-4">
             <img
               src={isLightMode ? lightBg : darkBg}
               alt="DCODE LOGO"
@@ -59,11 +59,10 @@ const Navbar = () => {
               <NavLink
                 key={link.id}
                 to={link.id}
-                className={`relative px-4 py-2 rounded-lg transition-all duration-300 ${
-                  location.pathname === link.id
-                    ? 'text-primary bg-primary/10'
-                    : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'
-                }`}
+                className={`relative px-4 py-2 rounded-lg transition-all duration-300 ${location.pathname === link.id
+                  ? 'text-primary bg-primary/10'
+                  : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'
+                  }`}
               >
                 {link.label}
                 {location.pathname === link.id && (
@@ -139,11 +138,10 @@ const Navbar = () => {
                     <NavLink
                       to={link.id}
                       onClick={() => setMobileOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-sm font-label-caps uppercase tracking-widest font-bold transition-all duration-200 ${
-                        location.pathname === link.id
-                          ? 'text-primary bg-primary/10 border-l-2 border-primary'
-                          : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'
-                      }`}
+                      className={`block px-4 py-3 rounded-xl text-sm font-label-caps uppercase tracking-widest font-bold transition-all duration-200 ${location.pathname === link.id
+                        ? 'text-primary bg-primary/10 border-l-2 border-primary'
+                        : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'
+                        }`}
                     >
                       {link.label}
                     </NavLink>

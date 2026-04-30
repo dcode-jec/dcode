@@ -1,23 +1,84 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+// Terminal lines config: type = 'cmd' for green commands, 'out' for output, 'success' for final highlight
+const terminalLines = [
+  { type: 'cmd',     text: '$ dcode init' },
+  { type: 'out',     text: 'Initializing environment variables...' },
+  { type: 'cmd',     text: '$ cat mission.txt' },
+  { type: 'out',     text: 'Building a community of developers, problem solvers, and innovators at JEC.' },
+  { type: 'cmd',     text: '$ npm run build' },
+  { type: 'out',     text: '> Compiling ideas...' },
+  { type: 'out',     text: '> Running tests...' },
+  { type: 'success', text: 'SUCCESS: Impact ready for deployment' },
+];
+
+const TYPE_SPEED_CMD = 40;   // ms per char for commands
+const TYPE_SPEED_OUT = 18;   // ms per char for output (faster)
+const LINE_PAUSE    = 350;   // pause between lines
+
 const Hero = () => {
-  const [typedText, setTypedText] = useState('');
-  const fullText = "SUCCESS: Impact ready for deployment";
+  // Each entry: { text, charIndex, done }
+  const [lines, setLines] = useState([]);
+  const [cursorLine, setCursorLine] = useState(0);
+  const [allDone, setAllDone] = useState(false);
+  const timerRef = useRef(null);
+  const bodyRef = useRef(null);
 
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setTypedText(fullText.slice(0, index));
-      index++;
-      if (index > fullText.length) {
-        clearInterval(interval);
-      }
-    }, 50); // Typing speed
+    let lineIdx = 0;
+    let charIdx = 0;
 
-    return () => clearInterval(interval);
+    const typeTick = () => {
+      if (lineIdx >= terminalLines.length) {
+        setAllDone(true);
+        return;
+      }
+
+      const currentLine = terminalLines[lineIdx];
+      const speed = currentLine.type === 'cmd' ? TYPE_SPEED_CMD : TYPE_SPEED_OUT;
+
+      if (charIdx === 0) {
+        // Start a new line
+        setLines(prev => [...prev, { ...currentLine, visibleText: '' }]);
+        setCursorLine(lineIdx);
+      }
+
+      if (charIdx <= currentLine.text.length) {
+        setLines(prev => {
+          const updated = [...prev];
+          updated[lineIdx] = { ...updated[lineIdx], visibleText: currentLine.text.slice(0, charIdx) };
+          return updated;
+        });
+        charIdx++;
+        timerRef.current = setTimeout(typeTick, speed);
+      } else {
+        // Line complete — pause, then move to next
+        lineIdx++;
+        charIdx = 0;
+        timerRef.current = setTimeout(typeTick, LINE_PAUSE);
+      }
+    };
+
+    // Start after a short initial delay
+    timerRef.current = setTimeout(typeTick, 600);
+
+    return () => clearTimeout(timerRef.current);
   }, []);
+
+  // Auto-scroll terminal body to bottom as lines appear
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [lines]);
+
+  const getLineColor = (line) => {
+    if (line.type === 'cmd') return 'text-green-400';
+    if (line.type === 'success') return 'text-primary-container';
+    return 'text-on-surface-variant';
+  };
 
   return (
     <section id="home" className="relative min-h-[921px] flex items-center justify-center px-8 py-20 overflow-hidden mt-10">
@@ -75,28 +136,20 @@ const Hero = () => {
             </div>
             
             {/* Terminal Body */}
-            <div className="p-6 font-code-display text-sm text-primary-fixed-dim/80 flex-1 overflow-hidden flex flex-col">
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-                <p className="text-green-400 mb-2">$ dcode init</p>
-                <p className="mb-4 text-on-surface-variant">Initializing environment variables...</p>
-              </motion.div>
-              
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
-                <p className="text-green-400 mb-2">$ cat mission.txt</p>
-                <p className="mb-4 text-on-surface-variant">Building a community of developers, problem solvers, and innovators at JEC.</p>
-              </motion.div>
-              
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }}>
-                <p className="text-green-400 mb-2">$ npm run build</p>
-                <p className="text-on-surface-variant mb-1">&gt; Compiling ideas...</p>
-                <p className="text-on-surface-variant mb-1">&gt; Running tests...</p>
-              </motion.div>
-              
-              <motion.div className="mt-auto" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.5 }}>
-                <p className="text-primary-container">
-                  {typedText}<span className="cursor-blink">_</span>
+            <div ref={bodyRef} className="p-6 font-code-display text-sm flex-1 overflow-y-auto flex flex-col gap-1">
+              {lines.map((line, i) => (
+                <p key={i} className={`${getLineColor(line)} leading-relaxed ${line.type === 'cmd' ? 'mt-3 first:mt-0' : ''}`}>
+                  {line.visibleText}
+                  {i === cursorLine && !allDone && (
+                    <span className="cursor-blink inline-block ml-[1px] -mb-[1px] w-[8px] h-[14px] bg-primary-fixed-dim/80 align-middle" />
+                  )}
                 </p>
-              </motion.div>
+              ))}
+              {allDone && (
+                <p className="text-green-400 mt-3">
+                  $ <span className="cursor-blink inline-block ml-[1px] -mb-[1px] w-[8px] h-[14px] bg-primary-fixed-dim/80 align-middle" />
+                </p>
+              )}
             </div>
           </div>
         </motion.div>
