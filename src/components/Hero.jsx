@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
@@ -46,13 +47,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <button className="bg-primary-container text-black font-label-caps text-xs uppercase px-8 py-4 rounded hover:bg-primary transition-all active:scale-95 flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(254,149,32,0.3)] hover:shadow-[0_0_25px_rgba(254,149,32,0.5)] tracking-wider">
+            <a href="#about" className="bg-primary-container text-black font-label-caps text-xs uppercase px-8 py-4 rounded hover:bg-primary transition-all active:scale-95 flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(254,149,32,0.3)] hover:shadow-[0_0_25px_rgba(254,149,32,0.5)] tracking-wider cursor-pointer">
               Explore DCODE
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </button>
-            <button className="glass-surface text-on-surface font-label-caps text-xs uppercase px-8 py-4 rounded hover:bg-white/5 transition-all inner-glow active:scale-95 flex items-center gap-2 tracking-wider">
-              Join Us
-            </button>
+            </a>
+            <Link to="/contact" className="glass-surface text-on-surface font-label-caps text-xs uppercase px-8 py-4 rounded hover:bg-white/5 transition-all inner-glow active:scale-95 flex items-center gap-2 tracking-wider cursor-pointer">
+              Contact Us
+            </Link>
           </div>
         </motion.div>
 
@@ -69,7 +70,7 @@ const Hero = () => {
             <div className="h-10 border-b border-white/10 bg-black/40 flex items-center px-4 gap-2">
               <div className="w-3 h-3 rounded-full bg-error"></div>
               <div className="w-3 h-3 rounded-full bg-primary-container"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <div className="w-3 h-3 rounded-full bg-surface-tint"></div>
               <div className="mx-auto font-code-display text-[10px] text-on-surface-variant/50 tracking-widest">dcode_terminal ~ bash</div>
             </div>
             
