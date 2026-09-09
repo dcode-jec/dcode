@@ -1,0 +1,196 @@
+.terminal {
+  display: flex;
+  flex-direction: column;
+  background: rgba(19, 19, 19, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 1px 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #e5e2e1;
+  position: relative;
+  width: 100%;
+}
+
+.terminal-titlebar {
+  height: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  user-select: none;
+}
+
+.terminal-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-button.close {
+  background-color: #ff5f56;
+}
+
+.terminal-button.minimize {
+  background-color: #ffbd2e;
+}
+
+.terminal-button.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  font-size: 12px;
+  color: rgba(219, 194, 175, 0.6);
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.terminal-spacer {
+  width: 52px;
+}
+
+.terminal-body {
+  padding: 16px 20px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.command-line {
+  margin-top: 4px;
+}
+
+.terminal-prompt {
+  color: #4ade80;
+  font-weight: 600;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.terminal-command {
+  color: #f8fafc;
+  word-break: break-all;
+}
+
+.terminal-output {
+  margin: 0;
+  color: #dbc2af;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-error {
+  color: #ff8080;
+}
+
+.terminal-success {
+  color: #fe9520;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(254, 149, 32, 0.4);
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.terminal-input-line input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  caret-color: #fe9520;
+}
+
+/* Nano Editor Modal */
+.nano-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  padding: 12px;
+}
+
+.nano-editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nano-header {
+  background: #fe9520;
+  color: #000000;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 12px;
+  letter-spacing: 0.05em;
+}
+
+.nano-textarea {
+  flex: 1;
+  background: #0d0d0d;
+  color: #00ff66;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: none;
+}
+
+.nano-status {
+  background: #222222;
+  color: #888888;
+  padding: 4px 12px;
+  font-size: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nano-footer {
+  background: #111111;
+  color: #dddddd;
+  padding: 6px 12px;
+  display: flex;
+  gap: 20px;
+  font-size: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
