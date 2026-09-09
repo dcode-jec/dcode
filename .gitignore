@@ -12,6 +12,23 @@ dist
 dist-ssr
 *.local
 
+# Environment
+server/.env
+.env
+.env.local
+.env.*.local
+*.env
+**/.env
+!**/.env.example
+
+# Uploads (seeded images are regenerated via seed script)
+server/uploads/team/*
+server/uploads/events/*
+server/uploads/gallery/*
+!server/uploads/team/.gitkeep
+!server/uploads/events/.gitkeep
+!server/uploads/gallery/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
