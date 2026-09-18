@@ -7,6 +7,7 @@ import anuvabImg from '../assets/team/anuvab.jpg';
 import mrigankaImg from '../assets/team/mriganka.jpg';
 import doyanImg from '../assets/team/doyan.jpg';
 import nibirImg from '../assets/team/nibir.jpg';
+import shreyaImg from '../assets/team/shreya.jpg';
 import suhaniImg from '../assets/team/suhani.jpg';
 import priyamImg from '../assets/team/priyam.webp';
 
@@ -88,6 +89,10 @@ const Team = () => {
     {
       name: "Nibir Kalita", role: "Design Co-Lead",
       img: nibirImg, socials: { insta: 'https://www.instagram.com/nibirkalita_7/', linkedin: 'https://www.linkedin.com/in/nibirkalita07/', email: 'raag2263@gmail.com' }
+    },
+    {
+      name: "Shreya Bhuyan", role: "Design Co-Lead",
+      img: shreyaImg, socials: { insta: 'https://www.instagram.com/shreya.bhuyan/', linkedin: 'https://www.linkedin.com/in/shreya-bhuyan-756522330/', email: 'shreyabhuyan1@gmail.com' }
     },
     {
       name: "Suhani Chutia", role: "Management Lead",

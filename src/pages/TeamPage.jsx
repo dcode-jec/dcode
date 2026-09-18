@@ -229,7 +229,7 @@ const TeamPage = () => {
         },
         {
           name: "Shreya Bhuyan",
-          role: "Design Associate",
+          role: "Design Co-Lead",
           img: shreyaImg,
           bio: "Shreya Bhuyan is a creator bridging code and canvas. As a member of the design team, she combines sharp programming expertise with a strong eye for aesthetics to craft engaging digital experiences.",
           socials: { insta: 'https://www.instagram.com/shreya.bhuyan/', linkedin: 'https://www.linkedin.com/in/shreya-bhuyan-756522330/', email: 'shreyabhuyan1@gmail.com' }

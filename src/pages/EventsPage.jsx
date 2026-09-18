@@ -8,10 +8,9 @@ const allEvents = [
   { type: 'HACKATHON', category: 'Contests', date: 'Feb 2025', title: 'Hackvita 4.0', desc: 'The ultimate 48-hour build-a-thon. Transform your wildest ideas into functional prototypes and compete for the top spot.', main: false },
   { type: 'WORKSHOP', category: 'Workshops', date: 'Dec 2024', title: 'DSA Workshop', desc: 'Master the fundamentals of Data Structures and Algorithms. Essential preparation for technical interviews and competitive coding.', main: false },
   { type: 'ORIENTATION', category: 'Workshops', date: 'Mar 2025', title: 'Language Orientation', desc: 'Introduction to modern programming paradigms and languages. Level up your syntax and explore new development horizons.', main: false },
-  { type: 'SOCIAL', category: 'Culture', date: 'May 2025', title: 'CLUB Afterparty', desc: 'Relax, network, and celebrate our technical achievements. The perfect way to bond with the DCODE community.', main: false }
 ];
 
-const filters = ['All_Events', 'Contests', 'Workshops', 'Culture'];
+const filters = ['All_Events', 'Contests', 'Workshops'];
 
 const EventsPage = () => {
   const [activeFilter, setActiveFilter] = useState('All_Events');
