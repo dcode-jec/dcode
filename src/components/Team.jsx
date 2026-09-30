@@ -8,6 +8,7 @@ import mrigankaImg from '../assets/team/mriganka.jpg';
 import doyanImg from '../assets/team/doyan.jpg';
 import nibirImg from '../assets/team/nibir.jpg';
 import shreyaImg from '../assets/team/shreya.jpg';
+import abhinavImg from '../assets/team/abhinav.jpg';
 import suhaniImg from '../assets/team/suhani.jpg';
 import priyamImg from '../assets/team/priyam.webp';
 
@@ -83,24 +84,28 @@ const Team = () => {
       img: mrigankaImg, socials: { insta: 'https://www.instagram.com/mahanta._.mrigaa/', linkedin: 'https://www.linkedin.com/in/mriganka-mahanta-661981397/', email: 'mrigank195@gmail.com' }
     },
     {
+      name: "Priyam Nath", role: "Tech Lead",
+      img: priyamImg, socials: { insta: 'https://www.instagram.com/priyam_nath5/', linkedin: 'https://www.linkedin.com/in/priyam-nath-4a8487329/', email: 'priyamnath5@gmail.com' }
+    },
+    {
       name: "Doyan Biswas", role: "Public Relations Lead",
       img: doyanImg, socials: { insta: 'https://www.instagram.com/_doyan__7/', linkedin: 'https://www.linkedin.com/in/doyan-biswas-b29b15313/', email: 'biswasdoyan@gmail.com' }
+    },
+    {
+      name: "Shreya Bhuyan", role: "Design Lead",
+      img: shreyaImg, socials: { insta: 'https://www.instagram.com/shreya.bhuyan/', linkedin: 'https://www.linkedin.com/in/shreya-bhuyan-756522330/', email: 'shreyabhuyan1@gmail.com' }
     },
     {
       name: "Nibir Kalita", role: "Design Co-Lead",
       img: nibirImg, socials: { insta: 'https://www.instagram.com/nibirkalita_7/', linkedin: 'https://www.linkedin.com/in/nibirkalita07/', email: 'raag2263@gmail.com' }
     },
     {
-      name: "Shreya Bhuyan", role: "Design Co-Lead",
-      img: shreyaImg, socials: { insta: 'https://www.instagram.com/shreya.bhuyan/', linkedin: 'https://www.linkedin.com/in/shreya-bhuyan-756522330/', email: 'shreyabhuyan1@gmail.com' }
+      name: "Abhinav Neog", role: "Design Co-Lead",
+      img: abhinavImg, socials: { insta: 'https://www.instagram.com/abh1n8v_?stkn=bmV2dDVpNWtmOW0x', linkedin: 'https://www.linkedin.com/in/abhinav-neog-abh1/', email: 'abhinavneog12@gmail.com' }
     },
     {
       name: "Suhani Chutia", role: "Management Lead",
       img: suhaniImg, socials: { insta: 'https://www.instagram.com/chocooky_08/', linkedin: 'https://www.linkedin.com/in/suhani-chutia-767b2a341/', email: 'suhanichutia00@gmail.com' }
-    },
-    {
-      name: "Priyam Nath", role: "Tech Lead",
-      img: priyamImg, socials: { insta: 'https://www.instagram.com/priyam_nath5/', linkedin: 'https://www.linkedin.com/in/priyam-nath-4a8487329/', email: 'priyamnath5@gmail.com' }
     }
   ];
 

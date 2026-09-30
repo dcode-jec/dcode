@@ -29,11 +29,11 @@ const Gallery = () => {
             transition={{ delay: idx * 0.1 }}
             className={`relative group rounded-xl overflow-hidden bg-surface-container border border-white/5 shadow-lg aspect-[4/3]`}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10" />
             <img src={img.src} alt={img.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" />
             <div className="absolute bottom-0 left-0 w-full p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <span className="font-code-display text-[12px] text-primary-container mb-2 block bg-black/50 w-fit px-2 py-1 rounded backdrop-blur-sm">{img.type}</span>
-              <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-1">{img.title}</h3>
+              <span className="font-code-display text-[13px] font-semibold text-primary-container mb-2 block bg-black/70 w-fit px-2 py-1 rounded backdrop-blur-sm">{img.type}</span>
+              <h3 className="font-headline-md text-2xl font-bold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] mb-1">{img.title}</h3>
             </div>
           </motion.div>
         ))}
